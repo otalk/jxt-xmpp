@@ -17,7 +17,7 @@ JXT.use(require('jxt-xmpp-types'));
 JXT.use(require('jxt-xmpp'));
 
 var stanza = JXT.parse('<message xmlns="jabber:client"><body>Hi!</body></message>');
-console.log(stana.body);
+console.log(stanza.body);
 // -> Hi!
 
 var Message = JXT.getMessage();
