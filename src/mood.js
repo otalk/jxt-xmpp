@@ -94,8 +94,8 @@ export default function (JXT) {
         namespace: NS.MOOD,
         element: 'mood',
         fields: {
-            text: JXT.utils.textSub(NS, 'text'),
-            value: JXT.utils.enumSub(NS, MOODS)
+            text: JXT.utils.textSub(NS.MOOD, 'text'),
+            value: JXT.utils.enumSub(NS.MOOD, MOODS)
         }
     });
 
