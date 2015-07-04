@@ -38,6 +38,7 @@ import Pubsub from './pubsub';
 import PubsubError from './pubsubError';
 import PubsubEvents from './pubsubEvents';
 import PubsubOwner from './pubsubOwner';
+import Push from './push';
 import Reach from './reach';
 import Register from './register';
 import Roster from './roster';
@@ -100,6 +101,7 @@ export default function (JXT) {
     JXT.use(PubsubError);
     JXT.use(PubsubEvents);
     JXT.use(PubsubOwner);
+    JXT.use(Push);
     JXT.use(Reach);
     JXT.use(Register);
     JXT.use(Roster);
