@@ -61,7 +61,7 @@ export default function (JXT) {
                 set: function (value) {
 
                     if (value.length > 0) {
-                        let container = Utils.find(this.xml, NS.MAM_0, 'always');
+                        let container = Utils.findOrCreate(this.xml, NS.MAM_0, 'always');
                         Utils.setMultiSubText(container, NS.MAM_0, 'jid', value);
                     }
                 }
@@ -85,7 +85,7 @@ export default function (JXT) {
                 set: function (value) {
 
                     if (value.length > 0) {
-                        let container = Utils.find(this.xml, NS.MAM_0, 'never');
+                        let container = Utils.findOrCreate(this.xml, NS.MAM_0, 'never');
                         Utils.setMultiSubText(container, NS.MAM_0, 'jid', value);
                     }
                 }
