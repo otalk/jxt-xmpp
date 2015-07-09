@@ -11,6 +11,7 @@ export default function (JXT) {
         namespace: NS.PUBSUB,
         element: 'pubsub',
         fields: {
+            create: Utils.subAttribute(NS.PUBSUB, 'create', 'node'),
             publishOptions: {
                 get: function () {
 
@@ -31,6 +32,12 @@ export default function (JXT) {
                 }
             }
         }
+    });
+
+    let Configure = JXT.define({
+        name: 'config',
+        namespace: NS.PUBSUB,
+        element: 'configure'
     });
 
     let Subscribe = JXT.define({
@@ -158,6 +165,7 @@ export default function (JXT) {
     });
 
 
+    JXT.extend(Pubsub, Configure);
     JXT.extend(Pubsub, Subscribe);
     JXT.extend(Pubsub, Unsubscribe);
     JXT.extend(Pubsub, Publish);
@@ -180,6 +188,7 @@ export default function (JXT) {
 
         JXT.extend(SubscriptionOptions, DataForm);
         JXT.extend(Item, DataForm);
+        JXT.extend(Configure, DataForm);
     });
 
     JXT.withDefinition('set', NS.RSM, function (RSM) {

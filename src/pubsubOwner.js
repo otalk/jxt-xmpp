@@ -10,7 +10,6 @@ export default function (JXT) {
         namespace: NS.PUBSUB_OWNER,
         element: 'pubsub',
         fields: {
-            create: Utils.subAttribute(NS.PUBSUB_OWNER, 'create', 'node'),
             purge: Utils.subAttribute(NS.PUBSUB_OWNER, 'purge', 'node'),
             del: Utils.subAttribute(NS.PUBSUB_OWNER, 'delete', 'node'),
             redirect: {
