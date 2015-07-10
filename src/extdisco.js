@@ -7,7 +7,7 @@ export default function (JXT) {
 
     let Services = exports.Services = JXT.define({
         name: 'services',
-        namespace: NS.DISCO_EXTERNAL,
+        namespace: NS.DISCO_EXTERNAL_1,
         element: 'services',
         fields: {
             type: Utils.attribute('type')
@@ -16,13 +16,13 @@ export default function (JXT) {
 
     let Credentials = exports.Credentials = JXT.define({
         name: 'credentials',
-        namespace: NS.DISCO_EXTERNAL,
+        namespace: NS.DISCO_EXTERNAL_1,
         element: 'credentials'
     });
 
     let Service = JXT.define({
         name: 'service',
-        namespace: NS.DISCO_EXTERNAL,
+        namespace: NS.DISCO_EXTERNAL_1,
         element: 'service',
         fields: {
             host: Utils.attribute('host'),
