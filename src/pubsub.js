@@ -11,7 +11,22 @@ export default function (JXT) {
         namespace: NS.PUBSUB,
         element: 'pubsub',
         fields: {
-            create: Utils.subAttribute(NS.PUBSUB, 'create', 'node'),
+            create: {
+                get: function () {
+                    let node = Utils.getSubAttribute(this.xml, NS.PUBSUB, 'create', 'node');
+                    if (node) {
+                        return node;
+                    }
+                    return Utils.getBoolSub(this.xml, NS.PUBSUB, 'create');
+                },
+                set: function (value) {
+                    if (value === true || !value) {
+                        Utils.setBoolSub(this.xml, NS.PUBSUB, 'create', value);
+                    } else {
+                        Utils.setSubAttribute(this.xml, NS.PUBSUB, 'create', 'node', value);
+                    }
+                }
+            },
             publishOptions: {
                 get: function () {
 
