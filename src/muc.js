@@ -216,16 +216,16 @@ export default function (JXT) {
                     this.xml.appendChild(hist);
 
                     if (opts.maxchars) {
-                        hist.setAttribute('' + opts.maxchars);
+                        hist.setAttribute('maxchars', '' + opts.maxchars);
                     }
                     if (opts.maxstanzas) {
-                        hist.setAttribute('' + opts.maxstanzas);
+                        hist.setAttribute('maxstanzas', '' + opts.maxstanzas);
                     }
                     if (opts.seconds) {
-                        hist.setAttribute('' + opts.seconds);
+                        hist.setAttribute('seconds', '' + opts.seconds);
                     }
                     if (opts.since) {
-                        hist.setAttribute(opts.since.toISOString());
+                        hist.setAttribute('since', opts.since.toISOString());
                     }
                 }
             }
