@@ -104,7 +104,6 @@ export default function (JXT) {
         element: 'affiliation',
         fields: {
             node: Utils.attribute('node'),
-            jid: Utils.jidAttribute('jid'),
             type: Utils.attribute('affiliation')
         }
     });
@@ -114,8 +113,7 @@ export default function (JXT) {
         namespace: NS.PUBSUB,
         element: 'affiliations',
         fields: {
-            node: Utils.attribute('node'),
-            jid: Utils.jidAttribute('jid')
+            node: Utils.attribute('node')
         }
     });
 

@@ -67,7 +67,7 @@ export default function (JXT) {
         namespace: NS.PUBSUB_OWNER,
         element: 'affiliation',
         fields: {
-            node: Utils.attribute('node'),
+            jid: Utils.jidAttribute('jid'),
             type: Utils.attribute('affiliation')
         }
     });
