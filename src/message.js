@@ -43,7 +43,7 @@ internals.defineMessage = function (JXT, name, namespace) {
             chatState: Utils.enumSub(NS.CHAT_STATES, [
                 'active', 'composing', 'paused', 'inactive', 'gone'
             ]),
-            replace: Utils.subAttribute(NS.MESSAGE_CORRECT_0, 'replace', 'id'),
+            replace: Utils.subAttribute(NS.CORRECTION_0, 'replace', 'id'),
             requestReceipt: Utils.boolSub(NS.RECEIPTS, 'request'),
             receipt: Utils.subAttribute(NS.RECEIPTS, 'received', 'id')
         }
