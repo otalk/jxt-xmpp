@@ -72,11 +72,17 @@ export default function (JXT) {
         }
     });
 
+    let GatheringComplete = stanza.define({
+        name: 'gatheringComplete',
+        element: 'gathering-complete'
+    });
+
 
     JXT.extend(ICE, Candidate, 'candidates');
     JXT.extend(ICE, RemoteCandidate);
     JXT.extend(ICE, Fingerprint, 'fingerprints');
     JXT.extend(ICE, SctpMap, 'sctp');
+    JXT.extend(ICE, GatheringComplete, 'gathering-complete');
 
     JXT.withDefinition('content', NS.JINGLE_1, function (Content) {
 
