@@ -134,6 +134,7 @@ export default function (JXT) {
         element: 'unsubscribe',
         fields: {
             node: Utils.attribute('node'),
+            subid: Utils.attribute('subid'),
             jid: Utils.jidAttribute('jid')
         }
     });
