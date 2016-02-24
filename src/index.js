@@ -19,6 +19,7 @@ import GeoLoc from './geoloc';
 import Hash from './hash';
 import Hats from './hats';
 import UDP from './iceUdp';
+import IBB from './ibb';
 import IQ from './iq';
 import JIDPrep from './jidprep';
 import Jingle from './jingle';
@@ -82,6 +83,7 @@ export default function (JXT) {
     JXT.use(Hash);
     JXT.use(Hats);
     JXT.use(UDP);
+    JXT.use(IBB);
     JXT.use(IQ);
     JXT.use(JIDPrep);
     JXT.use(Jingle);
