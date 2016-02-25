@@ -45,9 +45,9 @@ export default function (JXT) {
         name: '_filetransfer',
         namespace: FT_NS,
         element: 'description',
-        tags: [ 'jingle-description' ],
+        tags: [ 'jingle-application' ],
         fields: {
-            descType: { value: 'filetransfer' },
+            applicationType: { value: 'filetransfer' },
             offer: Utils.subExtension('offer', FT_NS, 'offer', File),
             request: Utils.subExtension('request', FT_NS, 'request', File)
         }

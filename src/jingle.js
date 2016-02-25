@@ -52,10 +52,10 @@ export default function (JXT) {
             disposition: Utils.attribute('disposition', 'session'),
             name: Utils.attribute('name'),
             senders: Utils.attribute('senders', 'both'),
-            description: {
+            application: {
                 get: function () {
 
-                    let opts = JXT.tagged('jingle-description').map(function (Description) {
+                    let opts = JXT.tagged('jingle-application').map(function (Description) {
 
                         return Description.prototype._name;
                     });
@@ -67,7 +67,7 @@ export default function (JXT) {
                 },
                 set: function (value) {
 
-                    let ext = '_' + value.descType;
+                    let ext = '_' + value.applicationType;
                     this[ext] = value;
                 }
             },
@@ -86,7 +86,7 @@ export default function (JXT) {
                 },
                 set: function (value) {
 
-                    let ext = '_' + value.transType;
+                    let ext = '_' + value.transportType;
                     this[ext] = value;
                 }
             }

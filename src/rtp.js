@@ -72,9 +72,9 @@ export default function (JXT) {
         name: '_rtp',
         namespace: NS.JINGLE_RTP_1,
         element: 'description',
-        tags: ['jingle-description'],
+        tags: ['jingle-application'],
         fields: {
-            descType: {value: 'rtp'},
+            applicationType: {value: 'rtp'},
             media: Utils.attribute('media'),
             ssrc: Utils.attribute('ssrc'),
             mux: Utils.boolSub(NS.JINGLE_RTP_1, 'rtcp-mux'),
