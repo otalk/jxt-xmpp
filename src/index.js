@@ -13,6 +13,7 @@ import Disco from './disco';
 import StanzaError from './error';
 import ExtDisco from './extdisco';
 import File from './file';
+import File3 from './file3';
 import Forwarded from './forwarded';
 import Framing from './framing';
 import GeoLoc from './geoloc';
@@ -77,6 +78,7 @@ export default function (JXT) {
     JXT.use(StanzaError);
     JXT.use(ExtDisco);
     JXT.use(File);
+    JXT.use(File3);
     JXT.use(Forwarded);
     JXT.use(Framing);
     JXT.use(GeoLoc);

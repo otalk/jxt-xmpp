@@ -39,7 +39,40 @@ export default function (JXT) {
             action: Utils.attribute('action'),
             initiator: Utils.attribute('initiator'),
             responder: Utils.attribute('responder'),
-            sid: Utils.attribute('sid')
+            sid: Utils.attribute('sid'),
+            info: {
+                get: function () {
+
+                    let opts = JXT.tagged('jingle-info').map(function (Info) {
+
+                        return Info.prototype._name;
+                    });
+                    for (let i = 0, len = opts.length; i < len; i++) {
+                        if (this._extensions[opts[i]]) {
+                            return this._extensions[opts[i]];
+                        }
+                    }
+                    if (Utils.getAttribute(this.xml, 'action') === 'session-info') {
+                        if (this.xml.children.length === 0) {
+                            return {
+                                infoType: 'ping'
+                            };
+                        }
+                        return {
+                            infoType: 'unknown'
+                        };
+                    }
+                },
+                set: function (value) {
+
+                    if (value.infoType === 'ping') {
+                        return;
+                    }
+
+                    let ext = '_' + value.infoType;
+                    this[ext] = value;
+                }
+            }
         }
     });
 
@@ -87,6 +120,25 @@ export default function (JXT) {
                 set: function (value) {
 
                     let ext = '_' + value.transportType;
+                    this[ext] = value;
+                }
+            },
+            security: {
+                get: function () {
+
+                    let opts = JXT.tagged('jingle-security').map(function (Info) {
+
+                        return Security.prototype._name;
+                    });
+                    for (let i = 0, len = opts.length; i < len; i++) {
+                        if (this._extensions[opts[i]]) {
+                            return this._extensions[opts[i]];
+                        }
+                    }
+                },
+                set: function (value) {
+
+                    let ext = '_' + value.securityType;
                     this[ext] = value;
                 }
             }
