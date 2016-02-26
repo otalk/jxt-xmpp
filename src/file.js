@@ -9,7 +9,7 @@ export default function (JXT) {
     let Utils = JXT.utils;
 
     let File = JXT.define({
-        name: '_file',
+        name: 'file',
         namespace: FT_NS,
         element: 'file',
         fields: {
