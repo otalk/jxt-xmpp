@@ -10,14 +10,14 @@ export default function (JXT) {
         get: function () {
 
             let result = [];
-            let items = Util.find(this.xml, NS.BLOCKING, 'item');
+            let items = Utils.find(this.xml, NS.BLOCKING, 'item');
             if (!items.length) {
                 return result;
             }
 
             items.forEach(function (item) {
 
-                result.push(new JID(Util.getAttribute(item, 'jid', '')));
+                result.push(new JID(Utils.getAttribute(item, 'jid', '')));
             });
 
             return result;
@@ -27,8 +27,8 @@ export default function (JXT) {
             let self = this;
             values.forEach(function (value) {
 
-                let item = Util.createElement(NS.BLOCKING, 'item', NS.BLOCKING);
-                Util.setAttribute(item, 'jid', value.toString());
+                let item = Utils.createElement(NS.BLOCKING, 'item', NS.BLOCKING);
+                Utils.setAttribute(item, 'jid', value.toString());
                 self.xml.appendChild(item);
             });
         }
