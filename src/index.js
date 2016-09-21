@@ -1,3 +1,4 @@
+import Addresses from './addresses';
 import Avatar from './avatar';
 import Bind from './bind';
 import Blocking from './blocking';
@@ -63,6 +64,7 @@ import Visibility from './visibility';
 
 export default function (JXT) {
 
+    JXT.use(Addresses);
     JXT.use(Avatar);
     JXT.use(Bind);
     JXT.use(Blocking);
