@@ -10,13 +10,22 @@ export default function (JXT) {
     });
 
 
-    JXT.extendIQ(Forwarded);
-    JXT.extendPresence(Forwarded);
-
     JXT.withMessage(function (Message) {
 
         JXT.extend(Message, Forwarded);
         JXT.extend(Forwarded, Message);
+    });
+
+    JXT.withPresence(function (Presence) {
+
+        JXT.extend(Presence, Forwarded);
+        JXT.extend(Forwarded, Presence);
+    });
+
+    JXT.withIQ(function (IQ) {
+
+        JXT.extend(IQ, Forwarded);
+        JXT.extend(Forwarded, IQ);
     });
 
     JXT.withDefinition('delay', NS.DELAY, function (Delayed) {
