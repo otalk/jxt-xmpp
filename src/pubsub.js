@@ -174,7 +174,8 @@ export default function (JXT) {
         namespace: NS.PUBSUB,
         element: 'item',
         fields: {
-            id: Utils.attribute('id')
+            id: Utils.attribute('id'),
+            publisher: Utils.jidAttribute('publisher')
         }
     });
 
