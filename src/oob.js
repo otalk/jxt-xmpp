@@ -14,5 +14,16 @@ export default function (JXT) {
         }
     });
 
+    let OOB_IQ = JXT.define({
+        name: 'oob',
+        element: 'query',
+        namespace: NS.OOB_IQ,
+        fields: {
+            url: JXT.utils.textSub(NS.OOB, 'url'),
+            desc: JXT.utils.textSub(NS.OOB, 'desc')
+        }
+    });
+
     JXT.extendMessage(OOB, 'oobURIs');
+    JXT.extendIQ(OOB_IQ);
 }
