@@ -44,6 +44,7 @@ import PubsubOwner from './pubsubOwner';
 import Push from './push';
 import Reach from './reach';
 import Register from './register';
+import References from './references';
 import Roster from './roster';
 import RSM from './rsm';
 import RTP from './rtp';
@@ -110,6 +111,7 @@ export default function (JXT) {
     JXT.use(Push);
     JXT.use(Reach);
     JXT.use(Register);
+    JXT.use(References);
     JXT.use(Roster);
     JXT.use(RSM);
     JXT.use(RTP);
