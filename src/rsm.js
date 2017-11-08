@@ -3,7 +3,27 @@ import { Namespace as NS } from 'xmpp-constants';
 
 export default function (JXT) {
 
-    let Utils = JXT.utils;
+    const Utils = JXT.utils;
+
+    const First = JXT.define({
+      name: 'oFirst',
+      namespace: NS.RSM,
+      element: 'first',
+      fields: {
+        value: Utils.text(),
+        index: Utils.numberAttribute('index', false)
+      }
+    });
+
+    const Last = JXT.define({
+      name: 'oLast',
+      namespace: NS.RSM,
+      element: 'last',
+      fields: {
+        value: Utils.text(),
+        index: Utils.numberAttribute('index', false)
+      }
+    });
 
     JXT.define({
         name: 'rsm',
@@ -30,7 +50,9 @@ export default function (JXT) {
             firstIndex: Utils.subAttribute(NS.RSM, 'first', 'index'),
             index: Utils.numberSub(NS.RSM, 'index', false),
             last: Utils.textSub(NS.RSM, 'last'),
-            max: Utils.numberSub(NS.RSM, 'max', false)
+            max: Utils.numberSub(NS.RSM, 'max', false),
+            oFirst: Utils.subAttribute(NS.RSM, First),
+            oLast: Utils.subAttribute(NS.RSM, Last)
         }
     });
 }
