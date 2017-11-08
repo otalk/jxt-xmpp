@@ -28,9 +28,9 @@ export default function (JXT) {
             count: Utils.numberSub(NS.RSM, 'count', false, 0),
             first: Utils.textSub(NS.RSM, 'first'),
             firstIndex: Utils.subAttribute(NS.RSM, 'first', 'index'),
-            index: Utils.textSub(NS.RSM, 'index'),
+            index: Utils.numberSub(NS.RSM, 'index', false),
             last: Utils.textSub(NS.RSM, 'last'),
-            max: Utils.textSub(NS.RSM, 'max')
+            max: Utils.numberSub(NS.RSM, 'max', false)
         }
     });
 }
