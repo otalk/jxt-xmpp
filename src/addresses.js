@@ -24,10 +24,12 @@ export default function (JXT) {
 
 
     JXT.withMessage(function (Message) {
+
         JXT.add(Message, 'addresses', Addresses);
     });
 
     JXT.withPresence(function (Presence) {
+
         JXT.add(Presence, 'addresses', Addresses);
     });
 }

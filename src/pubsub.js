@@ -13,6 +13,7 @@ export default function (JXT) {
         fields: {
             create: {
                 get: function () {
+
                     let node = Utils.getSubAttribute(this.xml, NS.PUBSUB, 'create', 'node');
                     if (node) {
                         return node;
@@ -20,6 +21,7 @@ export default function (JXT) {
                     return Utils.getBoolSub(this.xml, NS.PUBSUB, 'create');
                 },
                 set: function (value) {
+
                     if (value === true || !value) {
                         Utils.setBoolSub(this.xml, NS.PUBSUB, 'create', value);
                     } else {

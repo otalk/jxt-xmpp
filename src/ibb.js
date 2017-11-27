@@ -91,6 +91,7 @@ export default function (JXT) {
             blockSize: Utils.numberAttribute('block-size'),
             ack: {
                 get: function () {
+
                     let value = Utils.getAttribute(this.xml, 'stanza');
                     if (value === 'message') {
                         return false;
@@ -98,6 +99,7 @@ export default function (JXT) {
                     return true;
                 },
                 set: function (value) {
+
                     if (value.ack === false) {
                         Utils.setAttribute(this.xml, 'stanza', 'message');
                     } else {
@@ -112,15 +114,15 @@ export default function (JXT) {
 
         JXT.extend(Content, JingleIBB);
     });
-    
+
     JXT.withIQ(function (IQ) {
 
-        JXT.add(IQ, 'ibb', IBB);        
+        JXT.add(IQ, 'ibb', IBB);
     });
 
     JXT.withMessage(function (Message) {
 
-        JXT.add(Message, 'ibb', IBB);        
+        JXT.add(Message, 'ibb', IBB);
     });
 }
 

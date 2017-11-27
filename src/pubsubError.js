@@ -34,9 +34,11 @@ export default function (JXT) {
         JXT.add(StanzaError, 'pubsubCondition', JXT.utils.enumSub(NS.PUBSUB_ERRORS, CONDITIONS));
         JXT.add(StanzaError, 'pubsubUnsupportedFeature', {
             get: function () {
+
                 return JXT.utils.getSubAttribute(this.xml, NS.PUBSUB_ERRORS, 'unsupported', 'feature');
             },
             set: function (value) {
+
                 if (value) {
                     this.pubsubCondition = 'unsupported';
                 }
