@@ -1,6 +1,6 @@
 {
   "name": "jxt-xmpp",
-  "version": "2.4.0",
+  "version": "3.0.0",
   "description": "JXT definitions for XMPP",
   "main": "./lib/index.js",
   "author": "Lance Stout <lance@andyet.net>",
