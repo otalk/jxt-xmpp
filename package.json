@@ -8,7 +8,7 @@
   "dependencies": {
     "babel-runtime": "^5.6.15",
     "lodash.foreach": "^3.0.3",
-    "xmpp-constants": "^2.0.0",
+    "xmpp-constants": "^2.3.0",
     "xmpp-jid": "^1.1.1"
   },
   "devDependencies": {
