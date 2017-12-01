@@ -22,7 +22,10 @@ export default function (JXT) {
                 },
                 set: function (value) {
 
-                    if (value === true || !value) {
+                    if (value && value.node && value.type) {
+                        Utils.setSubAttribute(this.xml, NS.PUBSUB, 'create', 'node', value.node);
+                        Utils.setSubAttribute(this.xml, NS.PUBSUB, 'create', 'type', value.type);
+                    } else if (value === true || !value) {
                         Utils.setBoolSub(this.xml, NS.PUBSUB, 'create', value);
                     } else {
                         Utils.setSubAttribute(this.xml, NS.PUBSUB, 'create', 'node', value);
