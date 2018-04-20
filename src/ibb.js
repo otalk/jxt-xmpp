@@ -85,7 +85,8 @@ export default function (JXT) {
         tags: ['jingle-transport'],
         fields: {
             transportType: {
-                value: NS_JIBB
+                value: NS_JIBB,
+                writable: true,
             },
             sid: Utils.attribute('sid'),
             blockSize: Utils.numberAttribute('block-size'),

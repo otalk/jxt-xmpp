@@ -74,7 +74,7 @@ export default function (JXT) {
         element: 'description',
         tags: ['jingle-application'],
         fields: {
-            applicationType: {value: 'rtp'},
+            applicationType: {value: 'rtp', writable: true,},
             media: Utils.attribute('media'),
             ssrc: Utils.attribute('ssrc'),
             mux: Utils.boolSub(NS.JINGLE_RTP_1, 'rtcp-mux'),
