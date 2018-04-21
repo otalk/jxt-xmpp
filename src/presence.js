@@ -51,7 +51,7 @@ internals.definePresence = function (JXT, name, namespace) {
                 }
             },
             idleSince: Utils.dateSubAttribute(NS.IDLE_1, 'idle', 'since'),
-            decloak: Utils.subAttribute(NS.DECLOAK_0, 'decloak', 'reason'),
+            decloak: Utils.subAttribute(NS.DECLOAKING_0, 'decloak', 'reason'),
             avatarId: {
                 get: function () {
 
