@@ -37,7 +37,7 @@ export default function (JXT) {
         element: 'description',
         tags: [ 'jingle-application' ],
         fields: {
-            applicationType: { value: FT_NS }
+            applicationType: { value: FT_NS, writable: true, }
         }
     });
 

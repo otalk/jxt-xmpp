@@ -11,7 +11,7 @@ export default function (JXT) {
         element: 'transport',
         tags: ['jingle-transport'],
         fields: {
-            transportType: {value: 'iceUdp'},
+            transportType: {value: 'iceUdp', writable: true},
             pwd: Utils.attribute('pwd'),
             ufrag: Utils.attribute('ufrag')
         }
