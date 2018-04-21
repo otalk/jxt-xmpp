@@ -12,7 +12,8 @@ const CONDITIONS = [
     'malformed-request',
     'mechanism-too-weak',
     'not-authorized',
-    'temporary-auth-failure'
+    'temporary-auth-failure',
+    'not-supported'
 ];
 
 
