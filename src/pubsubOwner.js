@@ -90,10 +90,16 @@ export default function (JXT) {
         }
     });
 
+    let Default = JXT.define({
+        name: 'default',
+        namespace: NS.PUBSUB_OWNER,
+        element: 'default'
+    });
 
     JXT.extend(PubsubOwner, Configure);
     JXT.extend(PubsubOwner, Subscriptions);
     JXT.extend(PubsubOwner, Affiliations);
+    JXT.extend(PubSub, Default);
 
     JXT.extend(Subscriptions, Subscription, 'list');
     JXT.extend(Affiliations, Affiliation, 'list');
