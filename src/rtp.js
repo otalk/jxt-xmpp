@@ -265,6 +265,16 @@ export default function (JXT) {
         }
     });
 
+    let Stream = JXT.define({
+        name: '_stream',
+        namespace: 'urn:xmpp:jingle:apps:rtp:msid:0',
+        element: 'stream',
+        fields: {
+            id: Utils.attribute('id'),
+            track: Utils.attribute('track')
+        }
+    });
+
     let Mute = JXT.define({
         name: 'mute',
         namespace: NS.JINGLE_RTP_INFO_1,
@@ -290,6 +300,7 @@ export default function (JXT) {
     JXT.extend(RTP, PayloadType, 'payloads');
     JXT.extend(RTP, Source, 'sources');
     JXT.extend(RTP, SourceGroup, 'sourceGroups');
+    JXT.extend(RTP, Stream, 'streams');
 
     JXT.withDefinition('content', NS.JINGLE_1, function (Content) {
 

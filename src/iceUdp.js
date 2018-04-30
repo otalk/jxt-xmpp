@@ -13,7 +13,8 @@ export default function (JXT) {
         fields: {
             transportType: {value: 'iceUdp', writable: true},
             pwd: Utils.attribute('pwd'),
-            ufrag: Utils.attribute('ufrag')
+            ufrag: Utils.attribute('ufrag'),
+            gatheringComplete: Utils.boolSub(NS.JINGLE_ICE_UDP_1, 'gathering-complete')
         }
     });
 
