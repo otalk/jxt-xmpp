@@ -99,7 +99,7 @@ export default function (JXT) {
     JXT.extend(PubsubOwner, Configure);
     JXT.extend(PubsubOwner, Subscriptions);
     JXT.extend(PubsubOwner, Affiliations);
-    JXT.extend(PubSub, Default);
+    JXT.extend(PubSubOwner, Default);
 
     JXT.extend(Subscriptions, Subscription, 'list');
     JXT.extend(Affiliations, Affiliation, 'list');
