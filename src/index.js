@@ -28,6 +28,7 @@ import Jingle from './jingle';
 import JSONData from './json';
 import Eventlog from './logging';
 import MAM from './mam';
+import Markers from './markers';
 import Message from './message';
 import Mood from './mood';
 import MUC from './muc';
@@ -95,6 +96,7 @@ export default function (JXT) {
     JXT.use(JSONData);
     JXT.use(Eventlog);
     JXT.use(MAM);
+    JXT.use(Markers);
     JXT.use(Message);
     JXT.use(Mood);
     JXT.use(MUC);
