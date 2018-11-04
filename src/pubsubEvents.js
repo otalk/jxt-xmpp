@@ -113,7 +113,8 @@ export default function (JXT) {
         fields: {
             id: Utils.attribute('id'),
             node: Utils.attribute('node'),
-            publisher: Utils.jidAttribute('publisher')
+            publisher: Utils.jidAttribute('publisher'),
+            entry: Utils.subText(_xmppConstants.Namespace.PUBSUB_EVENT,'entry')
         }
     });
 
